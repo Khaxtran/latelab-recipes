@@ -1,0 +1,8 @@
+.dashboard {
+    display: block;
+    position: relative;
+    margin-top: 100px;
+    background-color: #FAF6F3;
+    width: 90%;
+    margin: 0 auto;
+}

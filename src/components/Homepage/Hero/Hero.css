@@ -1,0 +1,56 @@
+.hero-container {
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero-title {
+  text-align: center;
+  font-size: 2.3rem;
+  font-family: "Ribeye", cursive;
+  color: black;
+}
+
+.add-weight {
+  font-family: "Ribeye", cursive;
+  font-size: 3rem;
+  color: rgb(215, 133, 133);
+  -webkit-text-stroke-width: 2px;
+}
+
+.add-weight-2 {
+  font-family: "Ribeye", cursive;
+  font-size: 3rem;
+  color: rgb(231, 164, 164);
+  -webkit-text-stroke-width: 1px;
+}
+
+.cyan-cake {
+  border-radius: 20px;
+  transform: rotate(10deg);
+}
+
+.white-cake {
+  position: relative;
+  top: 40px;
+  border-radius: 20px;
+  transform: rotate(-15deg);
+}
+
+.birthday-cake {
+    transform: scaleX(-1);
+}
+
+.text-description {
+  font-family: "Signika", sans-serif;
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: 400;
+}
