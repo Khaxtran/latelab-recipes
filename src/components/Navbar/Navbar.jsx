@@ -1,37 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 
 export default function Navbar() {
+  const [isActive, setIsActive] = useState();
+
+  function toggleBurgerMenu() {
+    setIsActive(!isActive);
+  }
+
   return (
-    <nav className="nav-bar">
-      <div className="navbar-container columns is-vcentered">
+    <nav
+      className="navbar is-fixed-top"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div className="navbar-brand logo">
+        <a className="navbar-item" href="#">
+          LateLab_
+        </a>
 
-        <div className="logo-container column is-one-quarter">
-          <h1 className="logo">LateLab_</h1>
+        <a
+          role="button"
+          className="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="dropdown-menu"
+          onClick={toggleBurgerMenu}
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div
+        id="dropdown-menu"
+        className={`navbar-menu columns ${isActive ? "is-active" : ""}`}
+      >
+        <div className="navbar-start">
+          <a className="page">Home</a>
+          <a className="page">Recipes</a>
+          <a className="page">About</a>
         </div>
 
-        <div className="pages-container is-flex column is-half">
-          <ul className="pages">
-            <li className="page">
-              <a className="page-link" href="#">
-                Home
+        <div className="navbar-end">
+          <div className="navbar-item">
+            <div className="buttons">
+              <a className="button signup-btn">
+                <strong>Sign up</strong>
               </a>
-            </li>
-            <li className="page">
-              <a className="page-link" href="#">
-                Recipes
-              </a>
-            </li>
-            <li className="page">
-              <a className="page-link" href="#">
-                About us
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div className="btn-container is-flex column is-one-quarter">
-          <button className="new-recipe-btn">New recipe</button>
+              <a className="button is-light login-btn">Log in</a>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
